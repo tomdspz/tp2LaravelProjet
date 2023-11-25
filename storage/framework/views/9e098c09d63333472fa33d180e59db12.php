@@ -1,0 +1,1 @@
+<h1>page d'acceuil</h1><?php /**PATH /Users/lucrousseau/Documents/_documents/PRO/DUTMMI/S3P2/tpDevBack/tp2LaravelProjet/resources/views/index.blade.php ENDPATH**/ ?>
