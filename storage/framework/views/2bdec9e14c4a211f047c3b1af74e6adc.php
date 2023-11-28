@@ -16,7 +16,7 @@
 <a href="#">album</a>
 <a href="#">search</a>
 <a href="#">account</a>
-
+<a href="#">account</a>
 
 </body>
 </html>
@@ -25,3 +25,4 @@
 
 
 
+<?php /**PATH /Users/tomdesprez/tp2LaravelProjet/resources/views/index.blade.php ENDPATH**/ ?>
