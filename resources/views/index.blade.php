@@ -1,4 +1,4 @@
-<h1>page d'acceuil</h1>
+<h1>page d'acceuil luc</h1>
 <a href="#">photothèque</a>
 <a href="#">album</a>
 <a href="#">search</a>
