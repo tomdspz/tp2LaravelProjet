@@ -18,8 +18,10 @@ i{
 
 
 body{
-    display: flex;
+display: flex;
+background-color: red;
 }
+
 html{
     margin: 0;
     padding: 0;
