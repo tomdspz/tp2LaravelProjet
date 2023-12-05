@@ -73,6 +73,17 @@ html{
       </ul> 
 </nav>
 
+{{-- <p>{{$bdd->name }}</p> --}}
+
+@foreach($bdd as $f)
+    {{$f->name}}
+    {{$f->email}}
+@endforeach
+
+@foreach($images as $img)
+    {{$img->titre }}
+    {{$img->url }}
+@endforeach
 
 
 </body>
