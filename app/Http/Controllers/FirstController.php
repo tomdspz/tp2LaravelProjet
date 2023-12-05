@@ -14,7 +14,8 @@ class FirstController extends Controller
     }
 
     function albums() {
-        return view("albums");
+        $albums = DB::select("select * from albums");
+        return view("albums", ["albums" => $albums]);
     }
 
     function search() {
