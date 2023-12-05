@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Photothèque</title>
+        <title>Compte</title>
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
     </head>
@@ -16,9 +16,41 @@
                 <li><a href="/account"><i class='bx bxs-face'></i></a></li>
             </ul>
         </nav>
-        <h1>
-            Account
-        </h1>
+        
+
+
+<div class="add">
+
+            <div class="addphoto">
+
+ajouter photos
+            </div>
+
+            <div class="addalbum">
+
+ajouter albums
+            </div>
+</div>
+
+
+
+<div class="mesphotos">
+
+<h1>mes photos</h1>
+
+</div>
+
+<div class="mesalbums">
+
+<h1>mes albums</h1>
+
+</div>
+
+
+<center><button>Se Déconnecter</button></center>
+
+
+
     </body>
 </html>
 <?php /**PATH /Users/lucrousseau/Documents/_documents/PRO/DUTMMI/S3P2/tpDevBack/tp2LaravelProjet/resources/views/account.blade.php ENDPATH**/ ?>
