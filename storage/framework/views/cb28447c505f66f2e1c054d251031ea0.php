@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Albums</title>
+        <title>Photothèque</title>
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
     </head>
     <body>
         <nav>
@@ -16,21 +16,9 @@
                 <li><a href="/account"><i class='bx bxs-face'></i></a></li>
             </ul>
         </nav>
-       
-          
-
-            <div id="exercice3">
-            <div><img src="https://images.pexels.com/photos/1050558/pexels-photo-1050558.jpeg?cs=srgb&dl=pexels-steve-johnson-1050558.jpg&fm=jpg" /></div>
-           
-        </div>
-
-
-
-
-
-
-
-
+        <h1>
+            login
+        </h1>
     </body>
 </html>
 
@@ -38,3 +26,4 @@
 
 
 
+<?php /**PATH /Users/tomdesprez/tp2LaravelProjet/resources/views/login.blade.php ENDPATH**/ ?>
