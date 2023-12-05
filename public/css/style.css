@@ -1,0 +1,65 @@
+ul{
+    display: flex;
+  
+ margin: 0;
+
+    justify-content: space-between;
+margin-left: 500px;
+margin-right: 500px;
+}
+li{
+    list-style-type: none;
+    
+    margin-top: 20px;
+}
+.menu{
+    display: flex;
+ 
+}
+
+nav{
+    
+    width: 100%;
+    height: 100px;
+    background-color: #F5F5F7;
+  
+   
+    
+}
+i{
+    color: black;
+    font-size: 40px;
+}
+
+
+body{
+
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+#exercice2{
+    display: grid;
+    grid-auto-rows: 250px;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    padding: 40px;
+    gap: 15px;
+}
+#exercice2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+
+#exercice2 img:hover {
+    filter: grayscale(100%);
+}

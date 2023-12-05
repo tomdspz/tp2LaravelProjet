@@ -12,4 +12,20 @@ class FirstController extends Controller
         $images = DB::select("select * from photos");
         return view("index", ["bdd" => $bdd, "images" => $images]);
     }
+
+    function albums() {
+        return view("albums");
+    }
+
+    function search() {
+        return view("search");
+    }
+
+    function account() {
+        return view("account");
+    }
+
+    function login() {
+        return view("login");
+    }
 }
