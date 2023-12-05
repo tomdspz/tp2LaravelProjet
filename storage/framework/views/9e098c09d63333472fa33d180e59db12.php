@@ -82,6 +82,13 @@ html{
 
 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
+<?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+    <?php echo e($img->titre); ?>
+
+    <?php echo e($img->url); ?>
+
+<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
 
 </body>
 </html>
