@@ -23,6 +23,8 @@ Route::get("/", [FirstController::class, 'index']);
 
 Route::get("/albums", [FirstController::class, 'albums']);
 Route::get("/search", [FirstController::class, 'search']);
+
 Route::get("/account", [FirstController::class, 'account']);
-Route::post("/account", [FirstController::class, 'ajoutImg']);
+Route::post("/account", [FirstController::class, 'ajoutimg']);
+
 Route::get("/login", [FirstController::class, 'login']);

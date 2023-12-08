@@ -7,18 +7,18 @@
 
     <div>
         <h2>Ajout de photos</h2>
-        <form method="post" action="/account">
+        <form method="post" action="/account" enctype="multipart/form-data">
+            @csrf
             <div class="champ">
-                <label for="pseudo">Entrez un pseudonyme : </label>
-                <input type="text" id="pseudo">
+                <label for="titre">Titre de la photo: </label>
+                <input type="text" id="titre">
             </div>
             <div class="champ">
-                <label for="pass">Entrez un mot de passe :</label>
-                <input type="password" id="pass">
+                <label for="url">URL de la photo: </label>
+                <input type="text" id="url">
             </div>
-            <div class="champ">
-                <label for="mail">Entrez un mail :</label>
-                <input type="email" id="mail">
+            <div class="champSubmit">
+                <input type="submit">
             </div>
         </form>
     </div>
