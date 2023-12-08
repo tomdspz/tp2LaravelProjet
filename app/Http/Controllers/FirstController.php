@@ -26,6 +26,11 @@ class FirstController extends Controller
         return view("account");
     }
 
+    function ajoutImg() {
+        
+        return view("account");
+    }
+
     function login() {
         return view("login");
     }
