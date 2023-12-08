@@ -8,8 +8,8 @@
     <?php echo e($f->email); ?>
 
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    
-    <div id="exercice2">
+
+    <div class="ensemblePhotos">
         <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div><img src="<?php echo e($img->url); ?>" /></div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

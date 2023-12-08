@@ -22,6 +22,8 @@ Route::get('/', function () {
 Route::get("/", [FirstController::class, 'index']);
 
 Route::get("/albums", [FirstController::class, 'albums']);
+Route::get("/album/{id}", [FirstController::class, 'album'])->where('id','[0-9]+');
+
 Route::get("/search", [FirstController::class, 'search']);
 
 Route::get("/account", [FirstController::class, 'account']);

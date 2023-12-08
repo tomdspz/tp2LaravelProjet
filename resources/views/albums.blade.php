@@ -4,9 +4,14 @@
     <h1>
         Albums
     </h1>
-    @foreach($albums as $a)
-        {{$a->titre}}
-        <br>
-        <p>créé le {{$a->creation}}</p>
-    @endforeach
+    <div class="ensembleAlbums">
+        @foreach($albums as $a)
+        <div class="album">   
+            <a href="/album/{{$a->id }}">{{$a->titre }}</a>
+            <br>
+            <p>créé le {{$a->creation}}</p>
+        </div> 
+        @endforeach
+    </div>
+    
 @endsection

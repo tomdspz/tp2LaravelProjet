@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Album;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -14,8 +15,16 @@ class FirstController extends Controller
     }
 
     function albums() {
-        $albums = DB::select("select * from albums");
+        // $albums = DB::select("select * from albums");
+        // return view("albums", ["albums" => $albums]);
+        $albums = Album::all();
         return view("albums", ["albums" => $albums]);
+    }
+
+    function album($id){
+        $album = Album::findOrFail($id);
+        $photos = DB::select('SELECT * FROM photos WHERE album_id=?', [$id]);
+        return view('detailAlbum', ["album" => $album], ["photos" => $photos]);
     }
 
     function search() {

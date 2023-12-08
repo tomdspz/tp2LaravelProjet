@@ -7,8 +7,8 @@
     {{$f->name}}
     {{$f->email}}
     @endforeach
-    
-    <div id="exercice2">
+
+    <div class="ensemblePhotos">
         @foreach($images as $img)
             <div><img src="{{$img->url }}" /></div>
         @endforeach
