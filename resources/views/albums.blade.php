@@ -12,7 +12,7 @@
            
             <p>{{$a->titre }}</p>
 
-                <div>
+                <div class="hover-album">
                 <a href="/album/{{$a->id }}">Acceder à l'album</a>
             <p>créé le {{$a->creation}}</p>
                 </div>

@@ -11,7 +11,7 @@
            
             <p><?php echo e($a->titre); ?></p>
 
-                <div>
+                <div class="hover-album">
                 <a href="/album/<?php echo e($a->id); ?>">Acceder à l'album</a>
             <p>créé le <?php echo e($a->creation); ?></p>
                 </div>
