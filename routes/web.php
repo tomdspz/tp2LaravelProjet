@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\PhotoController;
 // use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 
@@ -28,5 +29,8 @@ Route::get("/album/{id}", [FirstController::class, 'album'])->where('id','[0-9]+
 
 Route::get("/search", [FirstController::class, 'search']);
 
-Route::get("/account", [FirstController::class, 'account']);
-Route::post("/account", [FirstController::class, 'ajoutimg']);
+Route::get("/account", [FirstController::class, 'account'])->middleware("auth");
+
+Route::group(['middleware'=> 'auth'], function () {
+    Route::resource('/photo',PhotoController::class)->only(["create", "store"]);
+});

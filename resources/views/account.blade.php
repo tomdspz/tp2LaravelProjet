@@ -1,26 +1,20 @@
 @extends("template")
             
 @section("content")
-    <h1>
+    {{-- <h1>
         Account
-    </h1>
-
-
+    </h1> --}}
     @auth
         Bonjour {{Auth::user()->name}}
-        <a class="form" href="/ajout">ajouter</a>
         <a href="{{route("logout")}}"
         onclick="document.getElementById('logout').submit(); return false;">Logout</a>
         <form id="logout" action="{{route("logout")}}" method="post">
             @csrf
         </form>
         {{-- <a href="{{route("login")}}">Route accessible que si on est connecté</a> --}}
-    @else
-        <a href="{{route("login")}}">Login</a>
-        <a href="{{route("register")}}">Register</a>
     @endauth
     
-    <div>
+    {{-- <div>
         <h2>Ajout de photos</h2>
         <form method="post" action="/account" enctype="multipart/form-data">
             @csrf
@@ -36,7 +30,10 @@
                 <input type="submit">
             </div>
         </form>
-    </div>
+    </div> --}}
+    <div class="ajoutPhoto">   
+        <a href="/photo/create">J'ajoute une photo</a>
+    </div> 
 
 
 @endsection

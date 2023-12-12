@@ -9,6 +9,7 @@ class Photo extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    protected $table = 'photo';
 
     public function album() {
         return $this->belongsTo(Album::class, "album_id");
