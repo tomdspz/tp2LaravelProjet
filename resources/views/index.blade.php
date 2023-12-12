@@ -3,10 +3,10 @@
 @section("content")
     {{-- <p>{{$bdd->name }}</p> --}}
 
-    @foreach($bdd as $f)
+    {{-- @foreach($bdd as $f)
     {{$f->name}}
     {{$f->email}}
-    @endforeach
+    @endforeach --}}
 
     <div class="ensemblePhotos">
         @foreach($images as $img)

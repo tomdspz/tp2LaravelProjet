@@ -10,9 +10,8 @@ use Illuminate\Support\Facades\Session;
 class FirstController extends Controller
 {
     function index(Request $request) {
-        $bdd = DB::select("select * from users");
         $images = DB::select("select * from photos");
-        return view("index", ["bdd" => $bdd, "images" => $images]);
+        return view("index", ["images" => $images]);
     }
 
     function albums() {

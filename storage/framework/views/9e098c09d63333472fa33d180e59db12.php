@@ -2,12 +2,7 @@
 <?php $__env->startSection("content"); ?>
     
 
-    <?php $__currentLoopData = $bdd; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $f): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-    <?php echo e($f->name); ?>
-
-    <?php echo e($f->email); ?>
-
-    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    
 
     <div class="ensemblePhotos">
         <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
