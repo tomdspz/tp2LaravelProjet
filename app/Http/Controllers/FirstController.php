@@ -36,20 +36,20 @@ class FirstController extends Controller
     }
 
     function ajoutimg(Request $request) {
-        // $request ->validate([
-        //     "titre"=> "required",
-        //     "url"=> "required",
-        // ]);
+        $request ->validate([
+            "titre"=> "required",
+            "url"=> "required",
+        ]);
         $titre = $request->input("titre");
         dd($request->input("titre"));
         dd($request->input("url"));
-        // $titre = $_POST['titre'];
-        // $url = $_POST['url'];
-        // echo($titre);
-        // echo($url);
-        // $bdd = DB::select("select * from users");
-        // $images = DB::select("select * from photos");
-        // return view("index", ["bdd" => $bdd, "images" => $images]);
+        $titre = $_POST['titre'];
+        $url = $_POST['url'];
+        echo($titre);
+        echo($url);
+        $bdd = DB::select("select * from users");
+        $images = DB::select("select * from photos");
+        return view("index", ["bdd" => $bdd, "images" => $images]);
         return view("account");
     }
 
