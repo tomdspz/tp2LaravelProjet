@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
+
 
 
 /*
@@ -29,4 +31,12 @@ Route::get("/search", [FirstController::class, 'search']);
 Route::get("/account", [FirstController::class, 'account']);
 Route::post("/account", [FirstController::class, 'ajoutimg']);
 
-Route::get("/login", [FirstController::class, 'login']);
+// Route::get("/login", [FirstController::class, 'login']);
+
+
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/login', [AuthenticatedSessionController::class, 'create'])
+        ->middleware('guest')
+        ->name('login');
+    // ...
+});

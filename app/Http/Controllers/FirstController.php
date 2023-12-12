@@ -5,10 +5,11 @@ use App\Models\Album;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class FirstController extends Controller
 {
-    function index() {
+    function index(Request $request) {
         $bdd = DB::select("select * from users");
         $images = DB::select("select * from photos");
         return view("index", ["bdd" => $bdd, "images" => $images]);
@@ -36,24 +37,24 @@ class FirstController extends Controller
     }
 
     function ajoutimg(Request $request) {
-        $request ->validate([
-            "titre"=> "required",
-            "url"=> "required",
-        ]);
-        $titre = $request->input("titre");
-        dd($request->input("titre"));
-        dd($request->input("url"));
-        $titre = $_POST['titre'];
-        $url = $_POST['url'];
-        echo($titre);
-        echo($url);
-        $bdd = DB::select("select * from users");
-        $images = DB::select("select * from photos");
-        return view("index", ["bdd" => $bdd, "images" => $images]);
-        return view("account");
+        // $request ->validate([
+        //     "titre"=> "required",
+        //     "url"=> "required",
+        // ]);
+        // $titre = $request->input("titre");
+        // dd($request->input("titre"));
+        // dd($request->input("url"));
+        // $titre = $_POST['titre'];
+        // $url = $_POST['url'];
+        // echo($titre);
+        // echo($url);
+        // $bdd = DB::select("select * from users");
+        // $images = DB::select("select * from photos");
+        // return view("index", ["bdd" => $bdd, "images" => $images]);
+        // return view("account");
     }
 
-    function login() {
-        return view("login");
-    }
+    // function login() {
+    //     return view("login");
+    // }
 }
