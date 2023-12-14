@@ -22,6 +22,13 @@
         </header>
 
         <main>
+            <div class="tPbarreHaut">
+                <h2>Tags</h2>
+                <a href="#" class="tPbarreHaut_tag">Tag</a>
+                <div class="tPbarreHaut_recherche">
+                    <li class="menu"><input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><i class='bx bx-search' ></i></a></li>
+                </div>
+            </div>
 			<?php echo $__env->yieldContent("content"); ?>
 		</main>
 
@@ -30,6 +37,4 @@
 
 
 
-
-
-<?php /**PATH /Users/tomdesprez/tp2LaravelProjet/resources/views/template.blade.php ENDPATH**/ ?>
+<?php /**PATH /Users/tomdesprez/tp2LaravelProjet/resources/views/templatePhotos.blade.php ENDPATH**/ ?>

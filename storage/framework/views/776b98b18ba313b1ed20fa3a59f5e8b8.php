@@ -1,8 +1,7 @@
-@extends("template")
             
-@section("content")
-    <form class="login2" action="{{route("register")}}" method="post">
-        @csrf
+<?php $__env->startSection("content"); ?>
+    <form class="login2" action="<?php echo e(route("register")); ?>" method="post">
+        <?php echo csrf_field(); ?>
         <h2>Inscription</h2>
         <label>Nom:</label>
         <input class ="inputform"type="text" name="name" required placeholder="Name" /><br />
@@ -14,7 +13,8 @@
         <input type="password" name="password_confirmation" required placeholder="password" /><br />
         <input type="submit" /><br />
 
-        <span class="inscription">Déjà un compte  ? <a href="{{route("login")}}">Connectez vous</a></span>
+        <span class="inscription">Déjà un compte  ? <a href="<?php echo e(route("login")); ?>">Connectez vous</a></span>
     </form>
 
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make("template", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/tomdesprez/tp2LaravelProjet/resources/views/auth/register.blade.php ENDPATH**/ ?>

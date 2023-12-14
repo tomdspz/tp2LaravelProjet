@@ -1,12 +1,16 @@
 @extends("template")
             
 @section("content")
-    <form action="{{route("login")}}" method="post">
+    <form class="login" action="{{route("login")}}" method="post">
         @csrf
-        <input type="email" name="email" required placeholder="Email" /><br />
+        <h2>Se connecter</h2>
+        <label>Identifiant:</label>
+        <input class ="inputform" type="email" name="email" required placeholder="Email" /><br />
+        <label for="name">Mot de passe:</label>
         <input type="password" name="password" required placeholder="password" /><br />
         {{-- Remember me<input type="checkbox" name="remember"   /><br /> --}}
-        <input type="submit" /><br />
+        <input class="btnform" type="submit" /><br />
+        <span class="inscription">Vous n'avez pas de compte  ? <a href="{{route("register")}}">Créez-en un</a></span>
     </form>
-    Vous n'avez pas de compte  ? <a href="{{route("register")}}">Créez-en un</a>
+    
 @endsection
