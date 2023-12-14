@@ -1,9 +1,10 @@
             
 <?php $__env->startSection("content"); ?>
-    <p><?php echo e($album->titre); ?></p>
+
+    <center>    <h1><?php echo e($album->titre); ?></h1></center>
 
     <div class="ensemblePhotos">
-        <a href="/photo/create?<?php echo e($album->id); ?>"><div style="background-color: grey">+</div></a>
+    <a href="#"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         <?php $__currentLoopData = $photos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div><img src="<?php echo e($img->url); ?>" /></div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
