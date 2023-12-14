@@ -8,7 +8,7 @@
     {{$f->email}}
     @endforeach --}}
 
-
+        <h1>testzzz</h1>
 
     <div class="ensemblePhotos">
         @foreach($images as $img)
