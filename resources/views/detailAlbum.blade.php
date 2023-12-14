@@ -1,10 +1,11 @@
 @extends("templatePhotos")
             
 @section("content")
-    <p>{{$album->titre }}</p>
+
+    <center>    <h1>{{$album->titre }}</h1></center>
 
     <div class="ensemblePhotos">
-        <a href="/photo/create?{{$album->id }}"><div style="background-color: grey">+</div></a>
+    <a href="#"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         @foreach($photos as $img)
             <div><img src="{{$img->url }}" /></div>
         @endforeach

@@ -15,7 +15,7 @@
                 <ul>
                     <li><a href="/"><i class='bx bx-image' ></i></a></li>
                     <li><a href="/albums"><i class='bx bx-images' ></i></a></li>
-                    {{-- <li class="menu"><input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><i class='bx bx-search' ></i></a></li> --}}
+                    {{-- <li class="menu"><input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><iclass='bx bx-search' ></i></a></li> --}}
                     <h1>MMIPhotos</h1>
                     <li><a href="/account"><i class='bx bxs-face'></i></a></li>
                 </ul>
@@ -23,13 +23,22 @@
         </header>
 
         <main>
+            
+        <div class="grandeclass">
+        
+   
             <div class="tPbarreHaut">
-                <h2>Tags</h2>
+                <h2>Tags:   </h2>
+                <a  href="#" class="tPbarreHaut_tag">Tag</a>
                 <a href="#" class="tPbarreHaut_tag">Tag</a>
-                <div class="tPbarreHaut_recherche">
-                    <li class="menu"><input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><i class='bx bx-search' ></i></a></li>
-                </div>
+               
             </div>
+            <div class="tPbarreHaut">
+              
+                <div class="tPbarreHaut_recherche">
+                   <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><i id ="recherche"  class='bx bx-search' ></i></a>
+                </div>
+            </div>  </div>
 			@yield("content")
 		</main>
 
