@@ -1,4 +1,4 @@
-@extends("template")
+@extends("templatePhotos")
             
 @section("content")
     <p>{{$album->titre }}</p>

@@ -1,4 +1,4 @@
-@extends("template")
+@extends("templatePhotos")
             
 @section("content")
     {{-- <p>{{$bdd->name }}</p> --}}

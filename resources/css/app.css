@@ -98,3 +98,11 @@ body{
     position: absolute;
     color: #F5F5F7;
 }
+
+
+
+
+
+.tPbarreHaut{
+    display: flex;
+}

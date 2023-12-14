@@ -14,7 +14,8 @@
                 <ul>
                     <li><a href="/"><i class='bx bx-image' ></i></a></li>
                     <li><a href="/albums"><i class='bx bx-images' ></i></a></li>
-                    <li class="menu"><input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><i class='bx bx-search' ></i></a></li>
+                    
+                    <h1>MMIPhotos</h1>
                     <li><a href="/account"><i class='bx bxs-face'></i></a></li>
                 </ul>
             </nav>
