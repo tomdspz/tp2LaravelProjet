@@ -4,6 +4,8 @@
 
     
 
+    <p>zzzzz</p>
+
     <div class="ensemblePhotos">
         <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div><img src="<?php echo e($img->url); ?>" /></div>
