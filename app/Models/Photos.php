@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Photo extends Model
+class Photos extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    protected $table = 'photo';
+    protected $table = 'photos';
 
     public function album() {
         return $this->belongsTo(Album::class, "album_id");

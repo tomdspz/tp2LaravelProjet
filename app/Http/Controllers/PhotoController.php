@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Photo;
+use App\Models\Photos;
 use Illuminate\Http\Request;
 
 class PhotoController extends Controller
@@ -32,7 +32,7 @@ class PhotoController extends Controller
             "titre"=> "required",
             "url"=>"required",
         ]);
-        $p = new Photo();
+        $p = new Photos();
         $p->titre = $request->input("titre");
         $p->url = $request->input("url");
         $p->save();
@@ -42,7 +42,7 @@ class PhotoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Photo $photo)
+    public function show(Photos $photo)
     {
         //
     }
