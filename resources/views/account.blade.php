@@ -19,14 +19,14 @@
         </form> --}}
     @endauth
 
-    <div class="voirPhoto">
+    {{-- <div class="voirPhoto">
         <a href="#">Mes photos</a>
     </div>
     <div class="ajoutPhoto">   
         <a href="/photo/create">J'ajoute une photo</a>
     </div> 
 
-    <br>
+    <br> --}}
     
     <div class="voirAlbum">
         <a href="#">Mes albums</a>
