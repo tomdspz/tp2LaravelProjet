@@ -23,8 +23,6 @@
         <a href="#"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         @foreach($albums as $a)
 
-
-
         <div class="album">  
             
             <a href="/album/{{$a->id }}">

@@ -34,3 +34,5 @@ Route::get("/account", [FirstController::class, 'account'])->middleware("auth");
 Route::group(['middleware'=> 'auth'], function () {
     Route::resource('/photo',PhotoController::class)->only(["create", "store"]);
 });
+
+Route::resource('/films',PhotoController::class)->only(["index", "show"]);

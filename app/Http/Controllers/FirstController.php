@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Session;
 class FirstController extends Controller
 {
     function index(Request $request) {
-        $images = DB::select("select * from photos");
-        $tags = DB::select("select * from tags");
+        $images = DB::select("SELECT * FROM photos");
+        $tags = DB::select("SELECT * FROM tags");
         return view("index", ["images" => $images], ["tags" => $tags]);
     }
 
@@ -25,7 +25,8 @@ class FirstController extends Controller
     function album($id){
         $album = Album::findOrFail($id);
         $photos = DB::select('SELECT * FROM photos WHERE album_id=?', [$id]);
-        return view('detailAlbum', ["album" => $album], ["photos" => $photos]);
+        $tags = DB::select("SELECT * FROM tags");
+        return view('detailAlbum', ["album" => $album], ["photos" => $photos], ["tags" => $tags]);
     }
 
     function search() {
