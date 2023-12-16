@@ -11,7 +11,8 @@ class FirstController extends Controller
 {
     function index(Request $request) {
         $images = DB::select("select * from photos");
-        return view("index", ["images" => $images]);
+        $tags = DB::select("select * from tags");
+        return view("index", ["images" => $images], ["tags" => $tags]);
     }
 
     function albums() {

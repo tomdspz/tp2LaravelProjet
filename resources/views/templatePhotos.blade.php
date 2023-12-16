@@ -29,8 +29,12 @@
    
             <div class="tPbarreHaut">
                 <h2>Tags:   </h2>
-                <a  href="#" class="tPbarreHaut_tag">Tag</a>
-                <a href="#" class="tPbarreHaut_tag">Tag</a>
+                @foreach($tags as $tgs)
+                    {{-- <div><img src="{{$img->url }}" /></div> --}}
+                    <a  href="#" class="tPbarreHaut_tag">{{$tgs->nom }}</a>
+                @endforeach
+                {{-- <a  href="#" class="tPbarreHaut_tag">Tag</a>
+                <a href="#" class="tPbarreHaut_tag">Tag</a> --}}
                
             </div>
             <div class="tPbarreHaut">

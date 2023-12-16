@@ -28,8 +28,11 @@
    
             <div class="tPbarreHaut">
                 <h2>Tags:   </h2>
-                <a  href="#" class="tPbarreHaut_tag">Tag</a>
-                <a href="#" class="tPbarreHaut_tag">Tag</a>
+                <?php $__currentLoopData = $tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tgs): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    
+                    <a  href="#" class="tPbarreHaut_tag"><?php echo e($tgs->nom); ?></a>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                
                
             </div>
             <div class="tPbarreHaut">
