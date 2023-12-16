@@ -2,7 +2,7 @@
             
 @section("content")
 
-<form action="/photo" method="POST">
+<form class="login" action="/photo" method="POST">
     @csrf
     <label for="titre">Titre: </label>
     <input type="text" name="titre" id="titre"/>
@@ -12,7 +12,7 @@
     <label for="url">URL: </label>
     <input type="text" name="url" id="url"/>
 
-    <select name="tags">
+    <select class ="select" name="tags">
         <option value="-1">Tags</option>
         @foreach($tags as $t)
             <option value="{{$t->nom}}">{{$t->nom}}</option>
