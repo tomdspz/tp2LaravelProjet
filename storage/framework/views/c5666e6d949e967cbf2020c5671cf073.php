@@ -1,13 +1,31 @@
             
 <?php $__env->startSection("content"); ?>
+<div class="grandeclass">
+        
+   
+    <div class="tPbarreHaut">
+        <h2>Tags:   </h2>
+        <?php $__currentLoopData = $tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tgs): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <a  href="#" class="tPbarreHaut_tag"><?php echo e($tgs->nom); ?></a>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        
+       
+    </div>
+    <div class="tPbarreHaut">
+      
+        <div class="tPbarreHaut_recherche">
+           <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><i id ="recherche"  class='bx bx-search' ></i></a>
+        </div>
+    </div>  
+</div>
 
     <center>    <h1><?php echo e($album->titre); ?></h1></center>
 
     <div class="ensemblePhotos">
-    <a href="#"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
+    <a href="/photo/create"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         <?php $__currentLoopData = $photos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div><img src="<?php echo e($img->url); ?>" /></div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make("templatePhotos", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/tomdesprez/tp2LaravelProjet/resources/views/detailAlbum.blade.php ENDPATH**/ ?>
+<?php echo $__env->make("template", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/tomdesprez/tp2LaravelProjet/resources/views/detailAlbum.blade.php ENDPATH**/ ?>
