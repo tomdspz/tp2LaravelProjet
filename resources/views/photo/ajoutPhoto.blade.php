@@ -2,7 +2,7 @@
             
 @section("content")
 
-<form class="login" action="/photo" method="POST">
+<form class="login" action="/photo?album={{$_GET['album']}}" method="POST">
     @csrf
     <label for="titre">Titre: </label>
     <input type="text" name="titre" id="titre"/>

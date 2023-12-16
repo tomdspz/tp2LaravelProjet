@@ -36,9 +36,12 @@ class PhotoController extends Controller
             "titre"=> "required",
             "url"=>"required",
         ]);
+        $albumcourant = $_GET['album'];
         $p = new Photos();
         $p->titre = $request->input("titre");
         $p->url = $request->input("url");
+        $p->album_id = $albumcourant;
+        // dd($albumcourant);
         $p->save();
         return redirect("/account");
     }
