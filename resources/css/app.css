@@ -310,6 +310,9 @@ color: black;
     margin-left: auto;
     margin-right: auto;
 }
+.voirAlbum>h2{
+    margin-left: 45px;
+}
 .select{
     width: 200px;
     margin-top: 20px;
