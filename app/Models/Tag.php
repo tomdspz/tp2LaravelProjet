@@ -11,6 +11,6 @@ class Tag extends Model
     public $timestamps = false;
 
     public function photos() {
-        return $this->belongsToMany(Photo::class, "possede_tag", "tag_id", "photo_id");
+        return $this->belongsToMany(Photos::class, "possede_tag", "tag_id", "photo_id");
     }
 }
