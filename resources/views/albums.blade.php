@@ -20,7 +20,7 @@
     </div>
 
     <div class="ensembleAlbums">
-        <a href="#"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
+        <a href="album/create"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         @foreach($albums as $a)
 
         <div class="album">  

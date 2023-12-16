@@ -6,6 +6,7 @@ use App\Models\Album;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 class FirstController extends Controller
 {
@@ -35,7 +36,10 @@ class FirstController extends Controller
     }
 
     function account() {
-        return view("account");
+        $user = Auth::user()->id;
+        $useralbums = DB::select('SELECT * FROM albums WHERE user_id=?', [$user]);
+        // dd($useralbums);
+        return view("account", ["useralbums" => $useralbums]);
     }
 
     function ajoutimg(Request $request) {
