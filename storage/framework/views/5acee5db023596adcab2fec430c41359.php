@@ -23,7 +23,7 @@
     
     <div class="voirAlbum">
        <h2>Mes Albums</h2>
-    </div>
+
     <div class="ajoutAlbum">
 
 
@@ -45,7 +45,44 @@
             </div>
 
         </div> 
+        <div class="album">  
+            
+            <a href="/album/">
+                <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
+                <h1 class="p-album"></h1>
+            </a>
+            <div class="hover-album">
+                Acceder à l'album
+                <p class="p2-album">créé le </p>
+            </div>
+
+        </div> 
+        <div class="album">  
+            
+            <a href="/album/">
+                <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
+                <h1 class="p-album"></h1>
+            </a>
+            <div class="hover-album">
+                Acceder à l'album
+                <p class="p2-album">créé le </p>
+            </div>
+
+        </div> 
+        <div class="album">  
+            
+            <a href="/album/">
+                <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
+                <h1 class="p-album"></h1>
+            </a>
+            <div class="hover-album">
+                Acceder à l'album
+                <p class="p2-album">créé le </p>
+            </div>
+
+        </div> 
        
+    </div>
     </div>
     </div>
 
