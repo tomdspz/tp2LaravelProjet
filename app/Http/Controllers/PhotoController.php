@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Photos;
+use App\Models\Tags;
 use Illuminate\Http\Request;
 
 class PhotoController extends Controller
@@ -20,7 +21,10 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        return view("photo.ajoutPhoto");
+        $tags = Tags::all();
+        // dd($tags);
+        // return view("films.ajoutFilm", ["personnes" => $personnes, "genres" => $genres]);
+        return view("photo.ajoutPhoto", ["tags" => $tags]);
     }
 
     /**

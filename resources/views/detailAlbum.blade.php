@@ -1,6 +1,25 @@
-@extends("templatePhotos")
+@extends("template")
             
 @section("content")
+<div class="grandeclass">
+        
+   
+    <div class="tPbarreHaut">
+        <h2>Tags:   </h2>
+        @foreach($tags as $tgs)
+            <a  href="#" class="tPbarreHaut_tag">{{$tgs->nom }}</a>
+        @endforeach
+        {{-- <a  href="#" class="tPbarreHaut_tag">Tag</a>
+        <a href="#" class="tPbarreHaut_tag">Tag</a> --}}
+       
+    </div>
+    <div class="tPbarreHaut">
+      
+        <div class="tPbarreHaut_recherche">
+           <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><i id ="recherche"  class='bx bx-search' ></i></a>
+        </div>
+    </div>  
+</div>
 
     <center>    <h1>{{$album->titre }}</h1></center>
 

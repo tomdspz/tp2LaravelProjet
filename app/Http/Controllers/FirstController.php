@@ -26,7 +26,8 @@ class FirstController extends Controller
         $album = Album::findOrFail($id);
         $photos = DB::select('SELECT * FROM photos WHERE album_id=?', [$id]);
         $tags = DB::select("SELECT * FROM tags");
-        return view('detailAlbum', ["album" => $album], ["photos" => $photos], ["tags" => $tags]);
+        // dd($tags, $photos);
+        return view('detailAlbum', ["album" => $album, "photos" => $photos, "tags" => $tags]);
     }
 
     function search() {

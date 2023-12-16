@@ -10,7 +10,7 @@ class Album extends Model
     use HasFactory;
     public $timestamps = false;
     public function photos() {
-        return $this->hasMany(Photo::class, "album_id");
+        return $this->hasMany(Photos::class, "album_id");
     }
 
     public function user() {

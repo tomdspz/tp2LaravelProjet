@@ -39,7 +39,8 @@
                 <div class="tPbarreHaut_recherche">
                    <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><i id ="recherche"  class='bx bx-search' ></i></a>
                 </div>
-            </div>  </div>
+            </div>  
+        </div>
 			<?php echo $__env->yieldContent("content"); ?>
 		</main>
 
