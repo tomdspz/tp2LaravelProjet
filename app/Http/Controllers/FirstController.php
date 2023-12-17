@@ -6,6 +6,7 @@ use App\Models\Album;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 class FirstController extends Controller
 {
@@ -19,6 +20,18 @@ class FirstController extends Controller
         // $albums = DB::select("select * from albums");
         // return view("albums", ["albums" => $albums]);
         $albums = Album::all();
+            // // Supposons que vous ayez l'ID de l'album que vous voulez récupérer
+            // $albumId = 1;
+
+            // // Récupérez l'album
+            // $album = Album::find($albumId);
+
+            // // Appel de la fonction photos pour obtenir les photos associées à cet album
+            // $photos = $album->photos;
+        // dd($albums);
+        // $photosalbum = DB::select('SELECT * FROM photos INNER JOIN albums ON photos.album_id = albums.id WHERE photos.album_id = ?', [$albums->id]);
+        $photosalbum = DB::select('SELECT url FROM photos INNER JOIN albums ON photos.album_id = albums.id WHERE photos.album_id = 1');
+        // dd($photosalbum);
         return view("albums", ["albums" => $albums]);
     }
 
@@ -35,7 +48,10 @@ class FirstController extends Controller
     }
 
     function account() {
-        return view("account");
+        $user = Auth::user()->id;
+        $useralbums = DB::select('SELECT * FROM albums WHERE user_id=?', [$user]);
+        // dd($useralbums);
+        return view("account", ["useralbums" => $useralbums]);
     }
 
     function ajoutimg(Request $request) {

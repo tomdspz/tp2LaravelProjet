@@ -21,10 +21,10 @@
     </div>  
 </div>
 
-    <center>    <h1>{{$album->titre }}</h1></center>
+    <center>    <h1>{{$album->titre }}</h1> <p>Album créé le {{$album->creation}}</p></center>
 
     <div class="ensemblePhotos">
-    <a href="/photo/create"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
+    <a href="/photo/create?album={{$album->id}}"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         @foreach($photos as $img)
             <div><img src="{{$img->url }}" /></div>
         @endforeach

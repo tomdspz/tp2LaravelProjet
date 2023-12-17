@@ -1,7 +1,7 @@
             
 <?php $__env->startSection("content"); ?>
 
-<form class="login" action="/photo" method="POST">
+<form class="login" action="/photo?album=<?php echo e($_GET['album']); ?>" method="POST">
     <?php echo csrf_field(); ?>
     <label for="titre">Titre: </label>
     <input type="text" name="titre" id="titre"/>
