@@ -1,3 +1,4 @@
+
 ul {
     display: flex;
     margin: 0;
@@ -20,10 +21,11 @@ nav {
     width: 100%;
     height: 100px;
     background-color: #F5F5F7;
+    font-family: 'Kanit', sans-serif;
 }
 
 ul>h1 {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 i {
@@ -72,19 +74,14 @@ body {
 }
 
 .ensembleAlbums .album {
-    background-color: grey;
+   
     border-radius: 8px;
+    
     display: flex;
-    flex-direction: column;
+   
 }
 
-.hover-album {
-    display: none;
-}
 
-.hover-album:hover {
-    display: block;
-}
 
 .ensembleAlbums img {
     height: 100%;
@@ -96,6 +93,15 @@ body {
 .p-album {
     position: absolute;
     color: #F5F5F7;
+    margin-top: -75px;
+   margin-left: 10px;
+    background-color: #757575;
+    padding:10px;
+    border-radius: 25px;
+    font-family: 'Kanit', sans-serif;
+font-family: 'Signika Negative', sans-serif;
+font-size: 25px;
+
 }
 
 .tPbarreHaut {
@@ -378,6 +384,10 @@ color: black;
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
+  }
+
+  .overlay img{
+    object-fit:scale-down;
   }
 
   .largeImage {

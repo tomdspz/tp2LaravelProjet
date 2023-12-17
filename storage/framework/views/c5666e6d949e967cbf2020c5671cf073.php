@@ -19,10 +19,10 @@
     </div>  
 </div>
 
-    <center>    <h1><?php echo e($album->titre); ?></h1></center>
+    <center>    <h1><?php echo e($album->titre); ?></h1> <p>Album créé le <?php echo e($album->creation); ?></p></center>
 
     <div class="ensemblePhotos">
-    <a href="/photo/create"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
+    <a href="/photo/create?album=<?php echo e($album->id); ?>"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         <?php $__currentLoopData = $photos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div><img src="<?php echo e($img->url); ?>" /></div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

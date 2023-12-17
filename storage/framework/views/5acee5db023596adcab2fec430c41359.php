@@ -7,7 +7,11 @@
 
             
                 <h1> Bonjour <?php echo e(Auth::user()->name); ?></h1>
-                <a href="<?php echo e(route("logout")); ?>" onclick="document.getElementById('logout').submit(); return false;">Se déconnecter</a>
+                <a href="<?php echo e(route("logout")); ?>"
+                onclick="document.getElementById('logout').submit(); return false;">Déconnexion</a>
+                <form id="logout" action="<?php echo e(route("logout")); ?>" method="post">
+                    <?php echo csrf_field(); ?>
+                </form>
             </div>
 
 
@@ -20,70 +24,23 @@
     <?php endif; ?>
 
     
-    
+
     <div class="voirAlbum">
-       <h2>Mes Albums</h2>
-
-    <div class="ajoutAlbum">
-
-
-
-    
-    <div class="ensembleAlbums">
-        <a href="#"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
-        
-
-        <div class="album">  
-            
-            <a href="/album/">
-                <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
-                <h1 class="p-album"></h1>
-            </a>
-            <div class="hover-album">
-                Acceder à l'album
-                <p class="p2-album">créé le </p>
-            </div>
-
-        </div> 
-        <div class="album">  
-            
-            <a href="/album/">
-                <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
-                <h1 class="p-album"></h1>
-            </a>
-            <div class="hover-album">
-                Acceder à l'album
-                <p class="p2-album">créé le </p>
-            </div>
-
-        </div> 
-        <div class="album">  
-            
-            <a href="/album/">
-                <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
-                <h1 class="p-album"></h1>
-            </a>
-            <div class="hover-album">
-                Acceder à l'album
-                <p class="p2-album">créé le </p>
-            </div>
-
-        </div> 
-        <div class="album">  
-            
-            <a href="/album/">
-                <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
-                <h1 class="p-album"></h1>
-            </a>
-            <div class="hover-album">
-                Acceder à l'album
-                <p class="p2-album">créé le </p>
-            </div>
-
-        </div> 
-       
-    </div>
-    </div>
+        <h2>Mes Albums</h2>
+        <div class="ajoutAlbum">
+            <div class="ensembleAlbums">
+                <a href="/album/create"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
+                <?php $__currentLoopData = $useralbums; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ua): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="album">  
+                    <a href="/album/<?php echo e($ua->id); ?>">
+                        <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
+                        <h1 class="p-album"><?php echo e($ua->titre); ?></h1>
+                    </a>
+                   
+                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div> 
+        </div>
     </div>
 
 

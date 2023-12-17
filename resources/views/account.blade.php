@@ -11,7 +11,7 @@
             
                 <h1> Bonjour {{Auth::user()->name}}</h1>
                 <a href="{{route("logout")}}"
-                onclick="document.getElementById('logout').submit(); return false;">Logout</a>
+                onclick="document.getElementById('logout').submit(); return false;">Déconnexion</a>
                 <form id="logout" action="{{route("logout")}}" method="post">
                     @csrf
                 </form>
@@ -48,10 +48,7 @@
                         <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
                         <h1 class="p-album">{{$ua->titre }}</h1>
                     </a>
-                    <div class="hover-album">
-                        Acceder à l'album
-                        <p class="p2-album">créé le </p>
-                    </div>
+                   
                 </div>
                 @endforeach
             </div> 
