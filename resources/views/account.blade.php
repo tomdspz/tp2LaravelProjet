@@ -5,37 +5,31 @@
         Account
     </h1> --}}
     @auth
-        <div class="hautAcceuil">
-            <div class="hautAcceuil_1">
-
-            
-                <h1> Bonjour {{Auth::user()->name}}</h1>
-                <a href="{{route("logout")}}"
-                onclick="document.getElementById('logout').submit(); return false;">Déconnexion</a>
-                <form id="logout" action="{{route("logout")}}" method="post">
-                    @csrf
-                </form>
-            </div>
-
-
-            
-            <div class="hautAcceuil_2">
-                <h3>Voici votre tableau de bord</h3>
-            </div>
+    <div class="hautAcceuil">
+        <div class="hautAcceuil_1">
+            <h1> Bonjour {{Auth::user()->name}}</h1>
+            <a href="{{route("logout")}}"
+            onclick="document.getElementById('logout').submit(); return false;">Déconnexion</a>
+            <form id="logout" action="{{route("logout")}}" method="post">
+                @csrf
+            </form>
         </div>
-        {{-- <form id="logout" action="{{route("logout")}}" method="post">
-            @csrf
-        </form> --}}
-    @endauth
 
-    {{-- <div class="voirPhoto">
-        <a href="#">Mes photos</a>
+        <div class="hautAcceuil_2">
+            <h3>Voici votre tableau de bord</h3>
+        </div>
     </div>
-    <div class="ajoutPhoto">   
-        <a href="/photo/create">J'ajoute une photo</a>
-    </div> 
 
-    <br> --}}
+    <div>
+        <h2>Créer un tag</h2>
+        <form class="ajoutTag" action="" method="POST">
+            @csrf
+            <label for="nom">Nom du tag: </label>
+            <input type="text" name="nom"/>
+        
+            <input type="submit" value="Créer"/>
+        </form>
+    </div>
 
     <div class="voirAlbum">
         <h2>Mes Albums</h2>
@@ -54,6 +48,8 @@
             </div> 
         </div>
     </div>
+
+    @endauth
 
 
 

@@ -2,28 +2,31 @@
 <?php $__env->startSection("content"); ?>
     
     <?php if(auth()->guard()->check()): ?>
-        <div class="hautAcceuil">
-            <div class="hautAcceuil_1">
-
-            
-                <h1> Bonjour <?php echo e(Auth::user()->name); ?></h1>
-                <a href="<?php echo e(route("logout")); ?>"
-                onclick="document.getElementById('logout').submit(); return false;">Logout</a>
-                <form id="logout" action="<?php echo e(route("logout")); ?>" method="post">
-                    <?php echo csrf_field(); ?>
-                </form>
-            </div>
-
-
-            
-            <div class="hautAcceuil_2">
-                <h3>Voici votre tableau de bord</h3>
-            </div>
+    <div class="hautAcceuil">
+        <div class="hautAcceuil_1">
+            <h1> Bonjour <?php echo e(Auth::user()->name); ?></h1>
+            <a href="<?php echo e(route("logout")); ?>"
+            onclick="document.getElementById('logout').submit(); return false;">Déconnexion</a>
+            <form id="logout" action="<?php echo e(route("logout")); ?>" method="post">
+                <?php echo csrf_field(); ?>
+            </form>
         </div>
-        
-    <?php endif; ?>
 
-    
+        <div class="hautAcceuil_2">
+            <h3>Voici votre tableau de bord</h3>
+        </div>
+    </div>
+
+    <div>
+        <h2>Créer un tag</h2>
+        <form class="ajoutTag" action="" method="POST">
+            <?php echo csrf_field(); ?>
+            <label for="nom">Nom du tag: </label>
+            <input type="text" name="nom"/>
+        
+            <input type="submit" value="Créer"/>
+        </form>
+    </div>
 
     <div class="voirAlbum">
         <h2>Mes Albums</h2>
@@ -45,6 +48,8 @@
             </div> 
         </div>
     </div>
+
+    <?php endif; ?>
 
 
 
