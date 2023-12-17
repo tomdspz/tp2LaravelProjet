@@ -8,7 +8,7 @@
     <label for="titre">Titre de l'album: </label>
     <input type="text" name="titre" id="titre"/>
 
-    <input type="submit" value="Insérer"/>
+    <input type="submit" value="Créer"/>
 </form>
 
 

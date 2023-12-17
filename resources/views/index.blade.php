@@ -1,15 +1,6 @@
 @extends("templatePhotos")
             
 @section("content")
-    {{-- <p>{{$bdd->name }}</p> --}}
-
-    {{-- @foreach($bdd as $f)
-    {{$f->name}}
-    {{$f->email}}
-    @endforeach --}}
-
-        {{-- <h1>testzzz</h1> --}}
-
     <div class="ensemblePhotos">
         @foreach($images as $img)
             <div>

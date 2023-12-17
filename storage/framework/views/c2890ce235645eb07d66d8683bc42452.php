@@ -18,9 +18,9 @@
     </div>
 
     <div>
-        <h2>Créer un tag</h2>
-        <form class="ajoutTag" action="" method="POST">
-            <?php echo csrf_field(); ?>
+     
+        <form class="login3" class="ajoutTag" action="" method="POST">
+            <?php echo csrf_field(); ?>   <h2>Créer un tag</h2>
             <label for="nom">Nom du tag: </label>
             <input type="text" name="nom"/>
         
@@ -39,10 +39,7 @@
                         <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
                         <h1 class="p-album"><?php echo e($ua->titre); ?></h1>
                     </a>
-                    <div class="hover-album">
-                        Acceder à l'album
-                        <p class="p2-album">créé le </p>
-                    </div>
+                   
                 </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div> 
