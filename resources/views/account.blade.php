@@ -21,9 +21,9 @@
     </div>
 
     <div>
-        <h2>Créer un tag</h2>
-        <form class="ajoutTag" action="" method="POST">
-            @csrf
+     
+        <form class="login3" class="ajoutTag" action="" method="POST">
+            @csrf   <h2>Créer un tag</h2>
             <label for="nom">Nom du tag: </label>
             <input type="text" name="nom"/>
         
