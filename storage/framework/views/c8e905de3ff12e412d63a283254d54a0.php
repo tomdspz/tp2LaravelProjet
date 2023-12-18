@@ -1,7 +1,7 @@
             
 <?php $__env->startSection("content"); ?>
 
-<form class="login" action="/photo?album=<?php echo e($_GET['album']); ?>" method="POST">
+<form class="login" action="/photo?album=<?php echo e($_GET['album']); ?>" method="POST" enctype="multipart/form-data">
     <?php echo csrf_field(); ?>
     <label for="titre">Titre: </label>
     <input type="text" name="titre" id="titre"/>
@@ -12,10 +12,10 @@
 
     <input type="file" name="image" />
 
-    <select class ="select" name="tags">
-        <option value="-1">Tags</option>
+    <select class ="select" name="tags" multiple>
+        
         <?php $__currentLoopData = $tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $t): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <option value="<?php echo e($t->nom); ?>"><?php echo e($t->nom); ?></option>
+            <option value="<?php echo e($t->id); ?>"><?php echo e($t->nom); ?></option>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </select>
 

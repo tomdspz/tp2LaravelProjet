@@ -2,7 +2,7 @@
             
 @section("content")
 
-<form class="login" action="/photo?album={{$_GET['album']}}" method="POST">
+<form class="login" action="/photo?album={{$_GET['album']}}" method="POST" enctype="multipart/form-data">
     @csrf
     <label for="titre">Titre: </label>
     <input type="text" name="titre" id="titre"/>
@@ -14,10 +14,10 @@
 
     <input type="file" name="image" />
 
-    <select class ="select" name="tags">
-        <option value="-1">Tags</option>
+    <select class ="select" name="tags" multiple>
+        {{-- <option value="-1">Tags</option> --}}
         @foreach($tags as $t)
-            <option value="{{$t->nom}}">{{$t->nom}}</option>
+            <option value="{{$t->id}}">{{$t->nom}}</option>
         @endforeach
     </select>
 

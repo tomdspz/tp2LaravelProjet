@@ -27,12 +27,15 @@
         <a href="/photo/create?album={{$album->id}}"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         @foreach($photos as $img)
             <div>
-                <img src="{{$img->url }}" alt="Image à zoomer" class="smallImage">
+                <img src="{{$img->url }}" class="smallImage">
             </div>
             <div class="overlay">
-                <img src="" alt="Image en grand" class="largeImage">
+                <img src="" class="largeImage">
             </div>
         @endforeach
+        <div>
+            {{-- <img src="/storage/upload/BrQwXiqhsHRxTmzf1cxSGi7U8zW93XhWV8hKOVTq.jpg" alt="Image à zoomer" class="smallImage"> --}}
+        </div>
     </div>
     <script>
         let smallImages = document.querySelectorAll('.smallImage');

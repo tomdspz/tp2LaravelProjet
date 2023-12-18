@@ -47,26 +47,35 @@ class PhotoController extends Controller
         // return redirect("/account");
 
 
-
         $request->validate([
             "titre"=> "required",
             "image" => "required | file | mimes:jpg,png",
         ]);
+        // dd($request->file('image'));
 
         $image = "https://www.benefsnet.com/images/cms/film.gif";
+        // dd($image);
         if($request->file("image")->isValid() ){
             $f = $request->file("image")->hashName();
             $request->file("image")->storeAs("public/upload", $f);
             $image = "/storage/upload/$f";
         }
 
-        $albumcourant = $_GET['album'];
+        $tags = $request->input('tags');
+        // dd($selectedTag);
 
+        $albumcourant = $_GET['album'];
+        // dd($image);
         $p = new Photos();
         $p->titre = $request->input("titre");
         $p->url = $image;
         $p->album_id = $albumcourant;
+
+        $p->id = count(Photos::all()) + 1;
+        $p->tags()->attach($tags);
+
         $p->save();
+        // dd($p);
         return redirect("/account");
     }
 
