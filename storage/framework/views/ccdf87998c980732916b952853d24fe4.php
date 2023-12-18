@@ -11,7 +11,7 @@
         <input type="password" name="password" required placeholder="password" /><br />
         <label>Confirmez le mot de passe:</label>
         <input type="password" name="password_confirmation" required placeholder="password" /><br />
-        <input type="submit" /><br />
+        <input type="submit" value="Inscription"/><br />
 
         <span class="inscription">Déjà un compte  ? <a href="<?php echo e(route("login")); ?>">Connectez vous</a></span>
     </form>

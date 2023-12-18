@@ -9,7 +9,7 @@
         <label for="name">Mot de passe:</label>
         <input type="password" name="password" required placeholder="password" /><br />
         {{-- Remember me<input type="checkbox" name="remember"   /><br /> --}}
-        <input class="btnform" type="submit" /><br />
+        <input class="btnform" type="submit" value="Connexion" /><br />
         <span class="inscription">Vous n'avez pas de compte  ? <a href="{{route("register")}}">Créez-en un</a></span>
     </form>
     
