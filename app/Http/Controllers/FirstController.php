@@ -45,6 +45,12 @@ class FirstController extends Controller
         return view('detailAlbum', ["album" => $album, "photos" => $photos, "tags" => $tags]);
     }
 
+    function tag($id){
+        $images = DB::select("SELECT * FROM photos INNER JOIN possede_tag ON photos.id = possede_tag.photo_id WHERE possede_tag.tag_id = ?", [$id]);
+        $tags = DB::select("SELECT * FROM tags");
+        return view("index", ["images" => $images], ["tags" => $tags]);
+    }
+
     function search() {
         return view("search");
     }

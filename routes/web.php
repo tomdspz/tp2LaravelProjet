@@ -48,3 +48,5 @@ Route::group(['middleware'=> 'auth'], function () {
 Route::group(['middleware'=> 'auth'], function () {
     Route::resource('/tags',TagsController::class)->only(["create", "store"]);
 });
+
+Route::get("/tag/{id}", [FirstController::class, 'tag'])->where('id','[0-9]+');

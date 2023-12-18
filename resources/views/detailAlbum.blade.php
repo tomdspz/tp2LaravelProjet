@@ -28,11 +28,13 @@
         @foreach($photos as $img)
             <div>
                 <img src="{{asset($img->url) }}" class="smallImage">
-                <form action="{{ route('photo.destroy', $img->id) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit">Supprimer</button>
-                </form>
+                {{-- @if($img->album->user_id == Auth::id()) --}}
+                    <form action="{{ route('photo.destroy', $img->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Supprimer</button>
+                    </form>
+                {{-- @endif --}}
             </div>
             <div class="overlay">
                 <img src="" class="largeImage">

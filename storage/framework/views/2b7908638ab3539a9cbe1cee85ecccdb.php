@@ -40,16 +40,14 @@
             <div class="tPbarreHaut">
                 <h2>Tags:   </h2>
                 <?php $__currentLoopData = $tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tgs): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <a  href="#" class="tPbarreHaut_tag"><?php echo e($tgs->nom); ?></a>
+                    <a  href="/tag/<?php echo e($tgs->id); ?>" class="tPbarreHaut_tag"><?php echo e($tgs->nom); ?></a>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 
                
             </div>
             <div class="tPbarreHaut">
               
-                <div class="tPbarreHaut_recherche">
-                   <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><i id ="recherche"  class='bx bx-search' ></i></a>
-                </div>
+                
             </div>  
         </div>
 			<?php echo $__env->yieldContent("content"); ?>
