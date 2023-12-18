@@ -28,7 +28,16 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "nom"=> "required",
+        ]);
+        // $albumcourant = $_GET['album'];
+        $t = new Tags();
+        $t->nom = $request->input("nom");
+        // $p->album_id = $albumcourant;
+        // dd($albumcourant);
+        $t->save();
+        return redirect("/account");
     }
 
     /**

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\TagsController;
 // use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController;
 
 
@@ -40,4 +41,8 @@ Route::resource('/films',PhotoController::class)->only(["index", "show"]);
 
 Route::group(['middleware'=> 'auth'], function () {
     Route::resource('/album',AlbumController::class)->only(["create", "store"]);
+});
+
+Route::group(['middleware'=> 'auth'], function () {
+    Route::resource('/tags',TagsController::class)->only(["create", "store"]);
 });
