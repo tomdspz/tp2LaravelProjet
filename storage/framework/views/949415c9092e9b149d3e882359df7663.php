@@ -3,10 +3,10 @@
     <div class="ensemblePhotos">
         <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div>
-                <img src="<?php echo e($img->url); ?>" alt="Image à zoomer" class="smallImage">
+                <img src="<?php echo e($img->url); ?>" class="smallImage">
             </div>
             <div class="overlay">
-                <img src="" alt="Image en grand" class="largeImage">
+                <img src="" class="largeImage">
             </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>

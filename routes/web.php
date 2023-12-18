@@ -37,6 +37,8 @@ Route::group(['middleware'=> 'auth'], function () {
     Route::resource('/photo',PhotoController::class)->only(["create", "store"]);
 });
 
+Route::delete('/photo/{id}', [PhotoController::class, 'destroy'])->name('photo.destroy');
+
 Route::resource('/films',PhotoController::class)->only(["index", "show"]);
 
 Route::group(['middleware'=> 'auth'], function () {

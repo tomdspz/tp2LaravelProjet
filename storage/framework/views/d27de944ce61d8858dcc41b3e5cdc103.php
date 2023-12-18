@@ -26,7 +26,12 @@
         <a href="/photo/create?album=<?php echo e($album->id); ?>"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         <?php $__currentLoopData = $photos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div>
-                <img src="<?php echo e($img->url); ?>" class="smallImage">
+                <img src="<?php echo e(asset($img->url)); ?>" class="smallImage">
+                <form action="<?php echo e(route('photo.destroy', $img->id)); ?>" method="POST">
+                    <?php echo csrf_field(); ?>
+                    <?php echo method_field('DELETE'); ?>
+                    <button type="submit">Supprimer</button>
+                </form>
             </div>
             <div class="overlay">
                 <img src="" class="largeImage">

@@ -4,10 +4,10 @@
     <div class="ensemblePhotos">
         @foreach($images as $img)
             <div>
-                <img src="{{$img->url }}" alt="Image à zoomer" class="smallImage">
+                <img src="{{$img->url }}" class="smallImage">
             </div>
             <div class="overlay">
-                <img src="" alt="Image en grand" class="largeImage">
+                <img src="" class="largeImage">
             </div>
         @endforeach
     </div>

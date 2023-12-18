@@ -9,10 +9,10 @@
 
     <br>
 
-    {{-- <label for="url">URL: </label>
-    <input type="text" name="url" id="url"/> --}}
+    <label for="url">URL: </label>
+    <input type="text" name="url" id="url"/>
 
-    <input type="file" name="image" />
+    {{-- <input type="file" name="image" /> --}}
 
     <select class ="select" name="tags" multiple>
         {{-- <option value="-1">Tags</option> --}}

@@ -27,7 +27,12 @@
         <a href="/photo/create?album={{$album->id}}"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         @foreach($photos as $img)
             <div>
-                <img src="{{$img->url }}" class="smallImage">
+                <img src="{{asset($img->url) }}" class="smallImage">
+                <form action="{{ route('photo.destroy', $img->id) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">Supprimer</button>
+                </form>
             </div>
             <div class="overlay">
                 <img src="" class="largeImage">
