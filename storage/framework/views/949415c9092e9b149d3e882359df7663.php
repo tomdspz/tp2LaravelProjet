@@ -3,7 +3,7 @@
     <div class="ensemblePhotos">
         <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div>
-                <img src="<?php echo e($img->url); ?>" class="smallImage">
+                <img src="<?php echo e($img->url); ?>" class="PetiteImage">
             </div>
             <div class="overlay">
                 <img src="" class="largeImage">
@@ -11,11 +11,11 @@
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
     <script>
-        let smallImages = document.querySelectorAll('.smallImage');
+        let PetiteImages = document.querySelectorAll('.PetiteImage');
         let overlay = document.querySelector('.overlay');
         let largeImage = document.querySelector('.largeImage');
     
-        smallImages.forEach(function(image) {
+        PetiteImages.forEach(function(image) {
           image.addEventListener('click', function() {
             largeImage.src = image.src;
             overlay.style.display = 'flex';

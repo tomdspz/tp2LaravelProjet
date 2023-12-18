@@ -4,7 +4,7 @@
     <div class="ensemblePhotos">
         @foreach($images as $img)
             <div>
-                <img src="{{$img->url }}" class="smallImage">
+                <img src="{{$img->url }}" class="PetiteImage">
             </div>
             <div class="overlay">
                 <img src="" class="largeImage">
@@ -12,11 +12,11 @@
         @endforeach
     </div>
     <script>
-        let smallImages = document.querySelectorAll('.smallImage');
+        let PetiteImages = document.querySelectorAll('.PetiteImage');
         let overlay = document.querySelector('.overlay');
         let largeImage = document.querySelector('.largeImage');
     
-        smallImages.forEach(function(image) {
+        PetiteImages.forEach(function(image) {
           image.addEventListener('click', function() {
             largeImage.src = image.src;
             overlay.style.display = 'flex';

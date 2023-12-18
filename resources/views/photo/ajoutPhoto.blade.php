@@ -24,8 +24,4 @@
     <input type="submit" value="Insérer"/>
 </form>
 
-{{-- @foreach($tags as $t)
-    <p>{{$t->nom }}</p>
-@endforeach --}}
-
 @endsection

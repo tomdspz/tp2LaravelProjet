@@ -80,8 +80,7 @@ class PhotoController extends Controller
      */
     public function show(Photos $photo)
     {
-        // return view("photo.detailAlbum", compact("photo"));
-        // return view("photo.detailAlbum");
+        // 
     }
 
     public function destroy($id)

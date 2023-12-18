@@ -9,7 +9,7 @@
         <a href="/photo/create?album=<?php echo e($album->id); ?>"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         <?php $__currentLoopData = $photos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div>
-                <img src="<?php echo e(asset($img->url)); ?>" class="smallImage">
+                <img src="<?php echo e(asset($img->url)); ?>" class="petiteImage">
                 <?php if($album->user_id == Auth::id()): ?>
                     <form action="<?php echo e(route('photo.destroy', $img->id)); ?>" method="POST">
                         <?php echo csrf_field(); ?>
@@ -24,11 +24,11 @@
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
     <script>
-        let smallImages = document.querySelectorAll('.smallImage');
+        let petiteImages = document.querySelectorAll('.petiteImage');
         let overlay = document.querySelector('.overlay');
         let largeImage = document.querySelector('.largeImage');
 
-        smallImages.forEach(function(image) {
+        petiteImages.forEach(function(image) {
             image.addEventListener('click', function() {
             largeImage.src = image.src;
             overlay.style.display = 'flex';

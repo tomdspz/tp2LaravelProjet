@@ -5,10 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Album;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
 use Laravel\Fortify\Fortify;
 use Illuminate\Support\Facades\Auth;
-// use App\Https\Controllers\Fortify;
 
 
 class AlbumController extends Controller
@@ -27,7 +25,6 @@ class AlbumController extends Controller
     public function create()
     {
         $album = Album::all();
-        // dd($album);
         return view("album.ajoutAlbum", ["album" => $album]);
     }
 
@@ -40,14 +37,11 @@ class AlbumController extends Controller
             "titre"=> "required",
         ]);
         $datecreation = DB::select("SELECT DATE(NOW()) AS currentdate");
-        // $datecreation = "2000-01-01";
         $user = Auth::user()->id;
         $a = new Album();
         $a->titre = $request->input("titre");
         $a->creation = $datecreation[0]->currentdate;
         $a->user_id = $user;
-        // dd($datecreation[0]->currentdate);
-        // dd($user);
         $a->save();
         return redirect("/albums");
     }
@@ -56,22 +50,6 @@ class AlbumController extends Controller
      * Display the specified resource.
      */
     public function show(Album $album)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Album $album)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Album $album)
     {
         //
     }

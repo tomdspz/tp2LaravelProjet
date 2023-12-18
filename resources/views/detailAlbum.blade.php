@@ -10,7 +10,7 @@
         <a href="/photo/create?album={{$album->id}}"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         @foreach($photos as $img)
             <div>
-                <img src="{{asset($img->url) }}" class="smallImage">
+                <img src="{{asset($img->url) }}" class="petiteImage">
                 @if($album->user_id == Auth::id())
                     <form action="{{ route('photo.destroy', $img->id) }}" method="POST">
                         @csrf
@@ -25,11 +25,11 @@
         @endforeach
     </div>
     <script>
-        let smallImages = document.querySelectorAll('.smallImage');
+        let petiteImages = document.querySelectorAll('.petiteImage');
         let overlay = document.querySelector('.overlay');
         let largeImage = document.querySelector('.largeImage');
 
-        smallImages.forEach(function(image) {
+        petiteImages.forEach(function(image) {
             image.addEventListener('click', function() {
             largeImage.src = image.src;
             overlay.style.display = 'flex';

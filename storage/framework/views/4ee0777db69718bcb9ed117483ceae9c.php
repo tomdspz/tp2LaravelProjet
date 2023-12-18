@@ -1,22 +1,6 @@
             
 <?php $__env->startSection("content"); ?>
-    <div class="tPbarreHaut">
-        <h2>Trier par </h2>
-
-        <div class="trier">
-
-         <label class="" for="scales">Date de création:</label>
-        <input type="checkbox" id="scales" name="scales" checked />
-        </div>
-
-        
-    <div class="trier">
- <label for="horns">Titre:</label>
-     <input type="checkbox" id="horns" name="horns" />
-       
-    </div>
-       
-    </div>
+    
 
     <div class="ensembleAlbums">
         <a href="album/create"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
