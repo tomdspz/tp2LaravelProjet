@@ -1,11 +1,5 @@
             
 <?php $__env->startSection("content"); ?>
-    
-
-    
-
-        
-
     <div class="ensemblePhotos">
         <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div>

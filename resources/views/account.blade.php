@@ -18,7 +18,7 @@
         </div>
 
         <div>
-            <form class="login3" class="ajoutTag" action="" method="POST">
+            <form class="login3" class="ajoutTag" action="/tags" method="POST">
                 @csrf   
                 <h2>Créer un tag</h2>
                 <label for="nom">Nom du tag: </label>
