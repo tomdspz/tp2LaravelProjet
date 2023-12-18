@@ -35,7 +35,7 @@
                     <?php $__currentLoopData = $useralbums; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ua): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="album">  
                         <a href="/album/<?php echo e($ua->id); ?>">
-                            <img class ="img-album" src="https://www.foot01.com/img/images/650x600/2023/Dec/04/al-hilal-n-a-pas-besoin-de-neymar-son-coach-s-en-vante-neymar-160-368806.jpg" alt="">
+                            <img class ="img-album" src="<?php echo e(optional($photos->where('album_id', $ua->id)->first())->url ?? "https://www.snapon.co.za/images/thumbs/default-image_550.png"); ?>" alt="">
                             <h1 class="p-album"><?php echo e($ua->titre); ?></h1>
                         </a>
                     </div>

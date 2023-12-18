@@ -52,8 +52,9 @@ class FirstController extends Controller
     function account() {
         $user = Auth::user()->id;
         $useralbums = DB::select('SELECT * FROM albums WHERE user_id=?', [$user]);
+        $photos = Photos::all();
         // dd($useralbums);
-        return view("account", ["useralbums" => $useralbums]);
+        return view("account", ["useralbums" => $useralbums, "photos" => $photos]);
     }
 
     function ajoutimg(Request $request) {

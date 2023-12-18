@@ -26,9 +26,28 @@
         <a href="/photo/create?album=<?php echo e($album->id); ?>"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
         <?php $__currentLoopData = $photos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div>
-                <img src="<?php echo e($img->url); ?>" />
+                <img src="<?php echo e($img->url); ?>" alt="Image à zoomer" class="smallImage">
+            </div>
+            <div class="overlay">
+                <img src="" alt="Image en grand" class="largeImage">
             </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
+    <script>
+        let smallImages = document.querySelectorAll('.smallImage');
+        let overlay = document.querySelector('.overlay');
+        let largeImage = document.querySelector('.largeImage');
+
+        smallImages.forEach(function(image) {
+            image.addEventListener('click', function() {
+            largeImage.src = image.src;
+            overlay.style.display = 'flex';
+            });
+        });
+
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+        });
+    </script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make("template", \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/lucrousseau/Documents/_documents/PRO/DUTMMI/S3P2/tpDevBack/test2/tp2LaravelProjet/resources/views/detailAlbum.blade.php ENDPATH**/ ?>
