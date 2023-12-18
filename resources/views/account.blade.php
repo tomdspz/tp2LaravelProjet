@@ -35,7 +35,7 @@
                     <a href="/album/create"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
                     @foreach($useralbums as $ua)
                     <div class="album">  
-                        <a href="/album/{{$ua->id }}?Admin=true">
+                        <a href="/album/{{$ua->id }}">
                             <img class ="img-album" src="{{optional($photos->where('album_id', $ua->id)->first())->url ?? "https://www.snapon.co.za/images/thumbs/default-image_550.png"}}" alt="">
                             <h1 class="p-album">{{$ua->titre }}</h1>
                         </a>
