@@ -38,18 +38,21 @@ class PhotoController extends Controller
             "titre"=> "required",
             "url"=>"required",
         ]);
+        $tags = $request->input('tags');
         $albumcourant = $_GET['album'];
         $p = new Photos();
         $p->titre = $request->input("titre");
         $p->url = $request->input("url");
         $p->album_id = $albumcourant;
-        // $film->idGenre = $request->input("idGenre");
-        // dd($albumcourant);
+        $p->id = count(Photos::all()) + 1;
+        $p->tags()->attach($tags);
         $p->save();
-        return redirect("/account");
+        return redirect("/album/$albumcourant");
 
 
         // -> pour ajouter avec un input de fichier 
+        // -> Ici, j'arrive avec le code suivant, si je décommente la ligne 15 et commente les lignes 12 et 13 dans ajoutPhoto.blade.php, à insérer la photo dans la bdd mais une fois que je veux l'afficher sur le site, j'ai un carré bleu avec un point d'interrogation, pourtant, le chemin est correct, ce qui fait que je suis repassé au code ci-dessus avec l'ajout par url.
+
         // $request->validate([
         //     "titre"=> "required",
         //     "image" => "required | file | mimes:jpg,png",

@@ -1,22 +1,5 @@
             
 <?php $__env->startSection("content"); ?>
-    <div class="grandeclass">
-            
-    
-        <div class="tPbarreHaut">
-            <h2>Tags:   </h2>
-            <?php $__currentLoopData = $tags; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tgs): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <a  href="#" class="tPbarreHaut_tag"><?php echo e($tgs->nom); ?></a>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        </div>
-
-        <div class="tPbarreHaut">
-            <div class="tPbarreHaut_recherche">
-            <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="20" /> <a href=""><i id ="recherche"  class='bx bx-search' ></i></a>
-            </div>
-        </div>  
-    </div>
-
     <center>    
         <h1><?php echo e($album->titre); ?></h1> 
         <p>Album créé le <?php echo e($album->creation); ?></p>
@@ -27,21 +10,18 @@
         <?php $__currentLoopData = $photos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $img): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div>
                 <img src="<?php echo e(asset($img->url)); ?>" class="smallImage">
-                
+                <?php if($album->user_id == Auth::id()): ?>
                     <form action="<?php echo e(route('photo.destroy', $img->id)); ?>" method="POST">
                         <?php echo csrf_field(); ?>
                         <?php echo method_field('DELETE'); ?>
                         <button type="submit">Supprimer</button>
                     </form>
-                
+                <?php endif; ?>
             </div>
             <div class="overlay">
                 <img src="" class="largeImage">
             </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-        <div>
-            
-        </div>
     </div>
     <script>
         let smallImages = document.querySelectorAll('.smallImage');

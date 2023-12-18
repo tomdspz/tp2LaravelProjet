@@ -34,7 +34,7 @@
                     <a href="/album/create"><div class="boutonaddalbum"><span class="croi"><i class='bx bxs-layer-plus' ></i></span></div></a>
                     <?php $__currentLoopData = $useralbums; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ua): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <div class="album">  
-                        <a href="/album/<?php echo e($ua->id); ?>">
+                        <a href="/album/<?php echo e($ua->id); ?>?Admin=true">
                             <img class ="img-album" src="<?php echo e(optional($photos->where('album_id', $ua->id)->first())->url ?? "https://www.snapon.co.za/images/thumbs/default-image_550.png"); ?>" alt="">
                             <h1 class="p-album"><?php echo e($ua->titre); ?></h1>
                         </a>
